@@ -24,6 +24,7 @@ body {
 
 /* Simple Button styles*/
 button {
+    background-color: hidden;
 
 }
 
@@ -236,4 +237,127 @@ input[type=range]::-ms-fill-upper {
 /** 8k Screens, Large Devices, Wide Screens (8000px) **/
 @media screen and (min-width: 500em) {
 
+}
+
+.navigationBox {
+    color: white;
+	width: calc(100vh * 1.6);
+	height: calc(100vw * 0.625);
+    overflow: hidden;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.theDoorButton {
+    color: white;
+    position: absolute;
+    top: 17%;
+    left: 32%;
+    height: 62%;
+    width: 22%;
+	margin: 0px;
+	overflow:hidden;
+}
+
+.theKeyButton {
+    color: white;
+    position: absolute;
+    top: 79%;
+    left: 45%;
+    height: 9%;
+    width: 10%;
+    margin: 0px;
+    overflow: hidden;
+}
+.turnLeftButton {
+    background-color:transparent;
+    color: rgb(181, 204, 255);
+    position: absolute;
+    top: 19%;
+    left: 0%;
+    height: 62%;
+    width: 20%;
+    margin: 0px;
+    overflow: hidden;
+}
+.turnLeftButton:hover {
+    background: url(leftArrow.png);
+    color:transparent;
+    background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+.turnRightButton {
+    background-color:transparent;
+    color: rgb(181, 204, 255);
+    position: absolute;
+    top: 19%;
+    left: 80%;
+    height: 62%;
+    width: 20%;
+    margin: 0px;
+    overflow: hidden;
+}
+.turnRightButton:hover {
+    background: url(rightArrow.png);
+    color:transparent;
+    background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+.turnAroundButton {
+    background-color:transparent;
+    color: rgb(181, 204, 255);
+    position: absolute;
+    top: 88%;
+    left: 20%;
+    height: 12%;
+    width: 60%;
+    margin: 0px;
+    overflow: hidden;
+}
+.turnAroundButton:hover {
+    background: url(turnAround.png);
+    color:transparent;
+    background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+.forwardButton {
+    background-color:transparent;
+    color: rgb(181, 204, 255);
+    position: absolute;
+    top: 17%;
+    left: 40%;
+    height: 62%;
+    width: 22%;
+	margin: 0px;
+    overflow: hidden;
+}
+.forwardButton:hover {
+    background: url(forward.png);
+    color:transparent;
+    background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+.tellMeMore {
+    color: rgb(181, 204, 255);
+    position: absolute;
+    top:0%;
+    left: 45%;
+    height: 10%;
+    width: 11%;
+	margin: 0px;
+    overflow: hidden;
+}
+.tellMeMore:hover {
+    background: url(guideicon.png);
+    color:transparent;
+    background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+text-box[data-speaking="m"] {
+	display:none!important;
 }

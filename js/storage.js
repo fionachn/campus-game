@@ -4,5 +4,10 @@
 monogatari.storage ({
 	player: {
 		name: ''
+	},
+
+	student1: {
+		solved: false,
+		met: false,
 	}
 });
