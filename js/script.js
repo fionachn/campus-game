@@ -97,7 +97,7 @@ monogatari.assets ('scenes', {
 	'canyonvista': 'canyonvista.png',
 	'warren': 'warren.png',
 	'studentactivitycenter':'studentactivitycenter.png',
-	'studentcenteroldinside' : 'studentcenteroldinside.png'
+	'scoldinside' : 'scoldinside.png'
 
 });
 
@@ -654,24 +654,24 @@ monogatari.script ({
 	],
 
 	'oldStudentCenterInfo':[
-		'show background studentcenteroldinside',
+		'show background scoldinside',
 		'show character y',
 		'y The original Student Center still has things going on!',
 		{'Choice': {
 			'Dialog': 'y Which would you like to hear about?',
 			'Black Resource Center': {
 				'Text': 'Black Resource Center',
-				'Do': 'jump StudentCenterGym',
+				'Do': 'jump BRC',
 			},
 			
 			'LGBT Resource Center': {
 				'Text': 'LGBT Resource Center',
-				'Do': 'jump SCB',
+				'Do': 'jump LGBTRC',
 			},
 			
 			'Women\'s Center':{
 				'Text': 'Women\'s Center',
-				'Do': 'jump oldStudentCenterInfo',
+				'Do': 'jump WomensCenterInfo',
 			},
 
 			'That\'s all!' :{
@@ -730,7 +730,7 @@ monogatari.script ({
 
 	'SCBInfo':[
 		'show character y',
-		'y At Student Center B, you can talk to ISPO, which is the Internationl Students & Programs Office.',
+		'y At Student Center B, you can talk to ISPO, which is the International Students & Programs Office.',
 		'y ISPO has resources related to immigrations services. Students can come to ISPO to request documents, inquire about working in the US, enrollment, and leaving/returning to UCSD/the US.',
 		'y ISPO works with students through Zoom, emails, or through existing guides.',
 		'hide character y',
@@ -802,7 +802,7 @@ monogatari.script ({
 		'y CAPS also has community forums, outreach programs, consultations, and a variety of psychotherapies that cater to individuals or groups of people.',
 		'show character y normal',
 		'y CAPS can also be found elsewhere on campus: each of the undergrad colleges, the Student Health Center, OASIS, ISPPO, and the Camups Community Centers.',
-		'hide character y ',
+		'hide character y',
 		'jump GalbraithHall'
 	],
 
