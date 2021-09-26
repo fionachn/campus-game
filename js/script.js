@@ -97,7 +97,7 @@ monogatari.assets ('scenes', {
 	'canyonvista': 'canyonvista.png',
 	'warren': 'warren.png',
 	'studentactivitycenter':'studentactivitycenter.png',
-	'studentcenterold' : 'studentcenterold.png'
+	'studentcenteroldinside' : 'studentcenteroldinside.png'
 
 });
 
@@ -654,7 +654,7 @@ monogatari.script ({
 	],
 
 	'oldStudentCenterInfo':[
-		'show background studentcenterold',
+		'show background studentcenteroldinside',
 		'show character y',
 		'y The original Student Center still has things going on!',
 		{'Choice': {
