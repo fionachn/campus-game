@@ -44,6 +44,7 @@ monogatari.assets ('gallery', {
 
 // Define the music used in the game.
 monogatari.assets ('music', {
+	'jubilife' : 'jubilife.mp3',
 
 });
 
@@ -96,6 +97,7 @@ monogatari.assets ('scenes', {
 	'canyonvista': 'canyonvista.png',
 	'warren': 'warren.png',
 	'studentactivitycenter':'studentactivitycenter.png',
+	'studentcenterold' : 'studentcenterold.png'
 
 });
 
@@ -219,6 +221,7 @@ monogatari.script ({
 	'DroppingIn':[
 		'show background geisel with fadeIn',
 		'show character y normal at center with fadeIn',
+		'play music jubilife with loop',
 		'y This is Geisel, UCSD\'s iconic library! You\'ve probably already seen it, so we\'re starting here.',
 		'hide character y',
 		'jump Geisel'
@@ -651,6 +654,7 @@ monogatari.script ({
 	],
 
 	'oldStudentCenterInfo':[
+		'show background studentcenterold',
 		'show character y',
 		'y The original Student Center still has things going on!',
 		{'Choice': {
