@@ -4,10 +4,27 @@
 monogatari.action ('message').messages ({
 	'Map': {
 		title: 'Map',
-		subtitle: 'Pink squares indicate some of the key areas in the game, red lines show paths from place to place.',
+		subtitle: '',
 		body: `
-			<p><a href='https://imgur.com/TtnxgHz'>Marked Map</a> - Campus map marked indicating locations in the game.</p>
-			<p><a href='https://maps.ucsd.edu/map/default.htm'>Interactive Map</a> - Interactive UCSD campus map.</p>
+			<p><a href='https://maps.ucsd.edu/map/default.htm' target='_blank'>Interactive Map</a> - Interactive UCSD campus map.</p>
+		`
+	},
+
+	'Objectives': {
+		title: 'Objectives',
+		subtitle: 'Find these locations and submit your answers to @bunn_lord#6698 on discord or email fichen@ucsd.edu!',
+		body: `
+		<p> Somewhere you could charge your phone</p>
+		<p> Somewhere you could eat</p>
+		<p> Somewhere you could exercise</p>
+		<p> Somewhere you would study</p>
+		<p> Somewhere you would socialize</p>
+		<p> Somewhere you get writing support</p>
+		<p> Somewhere you could get tutoring</p>
+		<p> Somewhere you could get healthy food</p>
+		<p> Somewhere you could get an internship</p>
+		<p> Somewhere you could find a student org</p>
+		<p> Somewhere you might go to lecture for </p>
 		`
 	}
 });
@@ -97,7 +114,7 @@ monogatari.assets ('scenes', {
 	'canyonvista': 'canyonvista.png',
 	'warren': 'warren.png',
 	'studentactivitycenter':'studentactivitycenter.png',
-	'scoldinside' : 'scoldinside.png'
+	'scoldinside': 'scoldinside.png',
 
 });
 
@@ -128,41 +145,19 @@ monogatari.script ({
 		'y Welcome to ACM\'s Scavenger Hunt! (Click to read the next dialogue) ',
 		'show character y love at center with fadeIn',
 
-		'y In this game, you\'ll be talking to various UCSD students and helping them find the campus resources that they need! ',
+		'y Through this website, you can learn information about some of UCSD\'s locations! Using the information provided, you will find a list of objectives and submit your answers to the host.',
 		'show character y normal at center with fadeIn',
 
-		'y Some information will be given to you through text in the game, but you can also use any campus websites or maps that you find online.',
-		'y Try to get as many quests done as quickly as possible! The first teams to finish will earn prizes!',
+		'y All necessary information will be given to you through text in the game, but you can also use any campus websites or maps that you find online.',
+		'y Try to get as many quests done as quickly as possible! The first people to finish will earn prizes!',
 		'y When you\'re finished with the game, message the host, Fiona! If you don\'t finish before the two hours are up, just send Fiona a screenshot of where you\'re at and how many quests you\'ve completed.',
 
-		{
-			'Input': {
-				'Text': 'What is your team name?',
-				'Validation': function (input) {
-					return input.trim ().length > 0;
-				},
-				'Save': function (input) {
-					this.storage ({
-						player: {
-							name: input
-						}
-					});
-					return true;
-				},
-				'Revert': function () {
-					this.storage ({
-						player: {
-							name: ''
-						}
-					});
-				},
-				'Warning': 'You must enter a name!'
-			}
-		},
-		'y Hello Team {{player.name}}!', 
+		'y Here are your objectives... (Screenshot these or write them down): ',
+		'show message Objectives',
+
 		{
 			'Choice': {
-				'Dialog': 'y Would your team like a map?',
+				'Dialog': 'y Would you like a map?',
 				'Yes': {
 					'Text': 'Yes',
 					'Do': 'jump Yes'
@@ -210,7 +205,7 @@ monogatari.script ({
 
 	'Return': [
 		'show character y normal at center with fadeIn',
-		'y As you help out UCSD students, you can save your game by clicking "Save" on the bottom right of this text box. This way, your progress will be saved even if the game glitches or you accidentally close the browser window.',
+		'y As you explore the campups, you can save your game by clicking "Save" on the bottom right of this text box.' ,
 		'y You\'ll be able to pick up where you left off by clicking Load on the home screen and clicking on the saved game.',
 		'y If you haven\'t been doing so already, you can also reveal all the dialogue at once by clicking while the text is being revealed. Text speed can also be changed in the settings.',
 		'y If you need assistance, message the host on Zoom (Fiona Chen) or ping her on the ACM Discord (Fiona | schleepy). Have fun!',
@@ -221,7 +216,7 @@ monogatari.script ({
 	'DroppingIn':[
 		'show background geisel with fadeIn',
 		'show character y normal at center with fadeIn',
-		'play music jubilife with loop',
+		'play music jubilife with loop with volume 60',
 		'y This is Geisel, UCSD\'s iconic library! You\'ve probably already seen it, so we\'re starting here.',
 		'hide character y',
 		'jump Geisel'
