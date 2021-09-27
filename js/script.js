@@ -6,7 +6,7 @@ monogatari.action ('message').messages ({
 		title: 'Map',
 		subtitle: '',
 		body: `
-			<p><a href='https://maps.ucsd.edu/map/default.htm' target='_blank'>Interactive Map</a> - Interactive UCSD campus map.</p>
+			<p><a href='https://maps.ucsd.edu/map/default.htm' target='_blank' rel='noopener noreferrer'>Interactive Map</a> - Interactive UCSD campus map.</p>
 		`
 	},
 
